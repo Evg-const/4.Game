@@ -138,10 +138,10 @@ function checkСorrectArguments(input){
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 } 
-function game(arguments){
+function game(arguments) {
     var compMuve = getRandomInt(arguments.length);
     const key = new Key();
-    const HMACkey = new Hmac(compMuve, key.hexKey);
+    const HMACkey = new Hmac(arguments[compMuve], key.hexKey);
     HMACkey.print();
     var gameTable = new GameTable(arguments);
     let playerMuve;
